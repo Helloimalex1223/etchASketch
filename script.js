@@ -26,3 +26,15 @@ function numberOfSquares(number)
         sqWindow.appendChild(square);
     }
 }
+
+let clearBtn = document.querySelector("clearSquares");
+
+clearBtn.addEventListener("click", () =>
+{
+    clearSquares();
+})
+
+function clearSquares()
+{
+    numberOfSquares(0);
+}
