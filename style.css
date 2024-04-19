@@ -17,9 +17,21 @@ html
     height: 600px;
     width: 600px;
     background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 .settings
 {
     height: 200px;
+}
+
+.sq
+{
+    outline-style: dotted;
+    outline-color: green;
+    outline-width: 1px;
+    width: 30px;
+    height: 30px;
 }
