@@ -30,7 +30,7 @@ function numberOfSquares(number)
         square.classList.add("sq");
 
         //add class to change square background color on mouseover
-        square.addEventListener("click", function(e) {
+        square.addEventListener("mouseover", function(e) {
             e.target.style.backgroundColor = "blue";
         })
         
