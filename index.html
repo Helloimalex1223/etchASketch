@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js" defer></script>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="container">
+        <div class="instructions1">
+            <p></p>
+        </div>
         <div class="window">
             <div class="title">
                 <h1 class="h1Title">Alex's Etch-a-sketch</h1>
@@ -17,14 +25,16 @@
 
             </div>
             <div class="settings">
-                <button class="numberSquares">How many squares to create?</button>
+                <button class="numberSquares">Number of squares</button>
 
                 <button class="clearSquares">Clear Grid</button>
                 <div>
-                <input type="color" id="colors" name="colors" value="#FFFFFF" />
-                <label for="colorLabel">Color</label>
+                <input type="color" id="colors" name="colors" value="#000000" />
               </div>
             </div>
+        </div>
+        <div class="instructions2">
+            <p></p>
         </div>
         
     </div>
