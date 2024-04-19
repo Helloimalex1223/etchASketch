@@ -14,6 +14,8 @@ sqNumber.addEventListener("click", () =>
 //creates a certain number of squares based on the number the user enters
 function numberOfSquares(number)
 {
+    //clear existing squares if any relevant. Don't want to overflow the screen element.
+    clearSquares();
     for(let i = 0; i < (number * number); i++)
     {
         //creates a square in the DOM
@@ -27,14 +29,19 @@ function numberOfSquares(number)
     }
 }
 
-let clearBtn = document.querySelector("clearSquares");
+let clearBtn = document.querySelector(".clearSquares");
 
 clearBtn.addEventListener("click", () =>
 {
     clearSquares();
 })
 
+
+//iterates through child nodes on the parent node. If a child node exists, remove it.
 function clearSquares()
 {
-    numberOfSquares(0);
+    while(sqWindow.hasChildNodes())
+    {
+        sqWindow.removeChild(sqWindow.firstChild);
+    };
 }
