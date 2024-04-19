@@ -1,3 +1,13 @@
+*
+{
+    font-family: 'VT323', 'Times New Roman';
+}
+
+.h1Title
+{
+    font-size: 50px;
+}
+
 html
 {
     background-color: aqua;
@@ -32,14 +42,32 @@ html
 .settings
 {
     height: 100px;
+    width: 100%;
     padding: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
 }
+
+button, input
+{
+    width: 180px;
+    height: 100%;
+    font-size: 30px;
+}
+
 
 .sq
 {
     outline-style: dotted;
-    outline-color: green;
+    outline-color: black;
     outline-width: 1px;
-    width: 30px;
-    height: 30px;
+
+}
+
+.instructions1, .instructions2
+{
+    width: 600px;
+    height: 100%;
+    background-color: orange;
 }
