@@ -50,7 +50,7 @@ function numberOfSquares(number)
         square.addEventListener("mouseover", function(e) {
             if(currentColor == undefined)
             {
-                e.target.style.backgroundColor = "black";
+                e.target.style.backgroundColor = "red";
             }
             else
             {
