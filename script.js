@@ -5,6 +5,15 @@ let sqNumber = document.querySelector(".numberSquares");
 
 let square;
 
+//selects color picker. When the user changes a color, the currentColor value changes
+let colorPicker = document.querySelector("#colors");
+let currentColor;
+
+colorPicker.addEventListener("input", (e) =>
+{
+    currentColor = colorPicker.value;
+})
+
 //gets user input to see how many squares to create
 sqNumber.addEventListener("click", () =>
 {
@@ -25,16 +34,16 @@ function numberOfSquares(number)
     clearSquares();
     for(let i = 0; i < (number * number); i++)
     {
-        //creates a square in the DOM
+        //creates a square
         square = document.createElement("div");
         square.classList.add("sq");
 
-        //add class to change square background color on mouseover
+        //Changes square background color on mouseover
         square.addEventListener("mouseover", function(e) {
-            e.target.style.backgroundColor = "blue";
+            e.target.style.backgroundColor = currentColor;
         })
         
-        //calculates the height and width of a single square based on the screen height and width.
+        //calculates  height and width of a single square based on screen height/width.
         square.style.height =  "calc(600px / " + number + ")";
         square.style.width =  "calc(600px / " + number + ")";
         sqWindow.appendChild(square);
@@ -50,16 +59,11 @@ clearBtn.addEventListener("click", () =>
 })
 
 
-//iterates through child nodes on the parent node. If a child node exists, remove it.
+//iterates through child nodes on parent. Removes child nodes.
 function clearSquares()
 {
     while(sqWindow.hasChildNodes())
     {
         sqWindow.removeChild(sqWindow.firstChild);
     };
-}
-
-function blueSq()
-{
-    square.style.backgroundColor = "blue";
 }
